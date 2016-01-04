@@ -1,0 +1,9 @@
+/.idea
+/app/bower
+/node_modules
+/css
+/app/composer
+/.sass-cache
+/bash.exe.stackdump
+/app/img/sprites
+/npm-debug.log

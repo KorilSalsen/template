@@ -1,0 +1,20 @@
+/* --------- common --------- */
+
+@import "_common/_variables";
+@import "_common/_mixins";
+@import "_common/_fonts";
+@import "_common/_sprite";
+
+/* --------- adjustment --------- */
+
+@import "_layout/adjustment";
+
+/* --------- widgets --------- */
+
+@import "_widgets/**/*";
+
+/* --------- sections --------- */
+
+@import "_sections/_header/**/*";
+@import "_sections/_page/**/*";
+@import "_sections/_footer/**/*";
