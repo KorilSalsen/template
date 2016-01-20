@@ -2,6 +2,6 @@
   "name": "dz1",
   "dependencies": {
     "jquery": "2",
-    "normalize-css": "normalize.css#~3.0.3",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
