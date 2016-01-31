@@ -7,3 +7,6 @@
 /bash.exe.stackdump
 /app/img/sprites
 /npm-debug.log
+/app/css
+/app/index.html
+/prod
