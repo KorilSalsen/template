@@ -4,7 +4,10 @@ html(lang='ru')
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content="IE=edge")
         meta(name='viewport' content='width=device-width')
-        link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+        //build:css css/vendors.css
+        // bower:css
+        // endbower
+        //endbuild
         link(rel="stylesheet" href="css/main.css")
         block title
     body
@@ -12,5 +15,8 @@ html(lang='ru')
             header.header
             block page
         footer.footer
-        script(src="bower/jquery/dist/jquery.js")
+        //build:js js/vendors.js
+        // bower:js
+        // endbower
+        //endbuild
         script(src="js/main.js")

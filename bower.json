@@ -3,5 +3,12 @@
   "dependencies": {
     "jquery": "2",
     "normalize-css": "normalize.css#~3.0.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css"
+      ]
+    }
   }
 }
