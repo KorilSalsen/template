@@ -130,8 +130,8 @@ gulp.task('useref', ['wiredep'], function () {
 
 //Watch
 gulp.task('watch', function () {
-    gulp.watch(path.watchJade, ['jade']);
-    gulp.watch(path.watchScss, ['compass']);
+    gulp.watch(paths.watchJade, ['jade']);
+    gulp.watch(paths.watchScss, ['compass']);
     gulp.watch(paths.html, ['wiredep']);
     gulp.watch([
         paths.html,
