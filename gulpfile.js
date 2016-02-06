@@ -111,7 +111,7 @@ gulp.task('server', function () {
 });
 
 //Wiredep
-gulp.task('wiredep', function () {
+gulp.task('wiredep', ['jade'], function () {
     return gulp.src(paths.html)
         .pipe(pl.plumber())
         .pipe(wiredep({
@@ -130,14 +130,15 @@ gulp.task('useref', ['wiredep'], function () {
 
 //Watch
 gulp.task('watch', function () {
-    gulp.watch(paths.watchJade, ['jade']);
+    gulp.watch(paths.watchJade, ['useref']);
     gulp.watch(paths.watchScss, ['compass']);
-    gulp.watch(paths.html, ['wiredep']);
     gulp.watch([
         paths.html,
         paths.js,
         paths.css
-    ]).on('change', browserSync.reload);
+    ]).on('change', function(){
+        setTimeout(browserSync.reload, 100);
+    });
 });
 
 //Uglify JS
@@ -168,4 +169,4 @@ gulp.task('move', function(){
 gulp.task('prod', ['uglify', 'mincss', 'move']);
 
 //Default
-gulp.task('default', ['server', 'jade', 'compass', 'useref','watch']);
+gulp.task('default', ['compass', 'useref','watch', 'server']);
